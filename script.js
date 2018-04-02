@@ -10,13 +10,13 @@ var button = document.getElementById('go');
 button.onclick = function onFormSubmit(event) {
     event.preventDefault(); // indispensable, sinon la page est rechargée
 
-    if (typeof (mail.value) == "string" &&
-        typeof (nom.value) == "string" &&
-        typeof (prenom.value) == "string" &&
+    if (mail.value != "" &&
+        nom.value != "" &&
+        prenom.value != "" &&
         motDePasse.value === confirmMdP.value
     ) {
-        window.alert('bienvenue ' + nom.value);
-    
+         window.alert('bienvenue ' + nom.value);
+       
     }
     else {
         window.alert('tous les champs ne sont pas rempli correctement');
